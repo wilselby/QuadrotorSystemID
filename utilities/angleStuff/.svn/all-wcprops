@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff
+END
+projectImageToWorld.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/projectImageToWorld.m
+END
+drawPose.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/drawPose.m
+END
+axisAngleToQuaternion.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/axisAngleToQuaternion.m
+END
+projectWorldToImage.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/projectWorldToImage.m
+END
+quaternionToAxisAngle.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/quaternionToAxisAngle.m
+END
+eulerToQuaternion.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/eulerToQuaternion.m
+END
+quaternionToEuler.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/quaternionToEuler.m
+END
+convertStateToCameraExtrinsic.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/convertStateToCameraExtrinsic.m
+END
+meanAngle.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/meanAngle.m
+END
+angleConversionUnitTest.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/angleConversionUnitTest.m
+END
+rotMat2D.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/rotMat2D.m
+END
+convertStateToGlobalExtrinsic.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/convertStateToGlobalExtrinsic.m
+END
+convertBetweenWorldAndCamera.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/convertBetweenWorldAndCamera.m
+END
+rot3dfit.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/rot3dfit.m
+END
+rodrigues.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/rodrigues.m
+END
+eulerToMatrix.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/eulerToMatrix.m
+END
+drawCamera.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/drawCamera.m
+END
+normalizeAngle.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/normalizeAngle.m
+END
+plotCameras.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/plotCameras.m
+END
+eulerToAxisAngle.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/eulerToAxisAngle.m
+END
+axisAngleToEuler.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/axisAngleToEuler.m
+END
+applyRotFit.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/applyRotFit.m
+END
+quaternionToMatrix.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/angleStuff/quaternionToMatrix.m
+END

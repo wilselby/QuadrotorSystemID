@@ -1,0 +1,50 @@
+This is a collection of matlab code for doing simple regularized least
+squares experiments.  All code should work in both matlab and octave.
+
+General themes are that we try to use matrix decompositions to make
+varying lambda (the regularization parameter), doing leave-one-out
+computations (LOO), and doing multiclass computation inexpensively.
+
+In general, we assume that there is plenty of memory.  For linear RLS,
+this means that we can store the data several times.  For nonlinear,
+it means we can store the kernel matrix and a decomposition of it.
+Also, we have opted for ease-of-use over maximal speed and memory.
+You might be able to make routines that were a factor of 2 or 3 faster
+or used half as much memory by working in C or Fortran and calling
+BLAS/LAPACK directly.  (In particular, as of 2005, it seemed that
+matlab was not using the holy grail algorithm for
+eigendecompositions.)
+
+We provide three levels of functions.  In general, there is a top
+level function that automatically finds the function (w or c, as
+appropriate) and LOO for BEST (LOO-minimizing) lambda for each class
+(e.g., lrlsloobest), a mid-level function which returns the function
+and LOO for each lambda for each class, and lower-level functions
+(they have _'s in the name) that do the real work, but assume you've
+already done the appropriate matrix factorizations.
+
+Linear RLS.  
+
+lrlsloobest --- gives you the w, LOO and lambda for the best lambda
+		for each class.
+lrlsloo --- gives you ws and LOOs for all the lambdas for each class
+lrlsoo_ll --- does the work for lrlsloo, after the SVD's done.
+lrlslo_ll1 --- does the actual work for a single value of lambda.
+	       useful if you actually want the LOO *predictions*.
+
+The function to use is lrlsloobest.  At a lower level, there's
+lrlsloo.  Both functions take X data, Y data (the labels --- it does
+handle multiclass), and a collection of lambdas.  The lower level
+function lrlsloo gives you all the ws and all the LOOs (leave-one-out
+errors).  lrlsloobest just gives you, for each class, the w, loo and
+lambda which yielded the smallest LOO.
+
+Nonlinear RLS.
+
+Similar to linear RLS, but all the functions take kernel matrices and
+eigendecompositions, instead of data and SVD.  The functions are
+rlsloobest, rlsloo, rlsloo_ll, and rlsloo_ll1.
+
+
+All software in this directory and all subdirectories are available
+under the modified BSD license --- see LICENSE for details.

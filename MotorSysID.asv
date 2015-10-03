@@ -1,0 +1,116 @@
+% Wil Selby
+% Washington, DC
+% Aug 31, 2015
+
+% This script processes .mat files comprised of ArduPilot Mavlink messages
+% converted from .tlog files to .mat files in Mission Planner. This script
+% will model the accelermoter, gyroscope, and GPS sensors
+
+%% Initialization
+
+clear all;
+close all;
+clc;
+
+% Add Paths
+addpath logs
+
+%% Load log
+load MotorRPM;
+
+%% Extract data
+
+t_start = 300;
+t_end = 780;
+
+time = MotorRPM(t_start:t_end,1)/1e3;
+PWM = MotorRPM(t_start:t_end,3);
+RPM = MotorRPM(t_start:t_end,5)/2; % 2 blades/propellor
+
+% Remove RPM < 2500 (sensor errors)
+RPMinds = RPM >= 2500;
+
+time = time(RPMinds);
+
+%% Simulate System
+
+tau = 0.15;
+DC = 6.5;
+
+s = tf('s');
+G = DC/(tau*s+1);
+
+dt = 0.01;
+t = time(1):dt:time(end);
+
+for(i = 1:size(t,2))
+    if (t(i) > 4.5 && t(i) <= 6.5)
+        PWM_sim(i) = 1000;
+    end
+    if (t(i) > 6.5 && t(i) <= 8.5)
+        PWM_sim(i) = 1425;
+    end
+    if (t(i) > 8.5 && t(i) <= 10.5)
+        PWM_sim(i) = 1475;
+    end
+    if (t(i) > 10.5 && t(i) <= 12.5)
+        PWM_sim(i) = 1450;
+    end
+    if (t(i) > 12.5 && t(i) <= 14.5)
+        PWM_sim(i) = 1390;
+    end
+    if (t(i) > 14.5 && t(i) <= 16.5)
+        PWM_sim(i) = 1425;
+    end
+    if (t(i) > 16.5 && t(i) <= 18.5)
+        PWM_sim(i) = 1480;
+    end
+    if (t(i) > 18.5 && t(i) <= 20.5)
+        PWM_sim(i) = 1425;
+    end
+    if (t(i) > 20.5 &&t(i) <= 22.5)
+        PWM_sim(i) = 1375;
+    end
+    if (t(i) > 22.5)
+        PWM_sim(i) = 1000;
+    end
+end
+
+RPM_sim = lsim(G,(PWM_sim),t);
+
+%% Discretized model
+sysD = c2d(G,.001,'tustin')
+
+for(k = 1:size(time,1))
+    if k == 1
+        RPM_est(k,1) = .02159*PWM(k);
+    end
+    if k > 1
+        RPM_est(k,1) = .9934*RPM_est(k-1) + .02159*PWM(k) + .02159*PWM(k-1);
+    end
+end
+
+%% Plot
+
+% figure();
+% plot(time,PWM);
+
+
+% RPM_est = (DC * ((PWM(RPMinds)-837)*10.8))/(tau+1);
+% RPM_est = DC * PWM(RPMinds).*(1-exp(-time(RPMinds)./tau));
+
+figure();
+plot(time,RPM(RPMinds),'r');
+hold on;
+plot(t,RPM_sim-5525,'b');
+plot(time,RPM_est-5525,'g');
+axis([8.5,22,3300,4200])
+str = sprintf('Simulated vs Actual Motor Dynamics (DC = %.2f Tc = %.2f)',DC,tau);
+title(str);
+xlabel('Time (s)');
+ylabel('RPM');
+legend('Actual','Simulated');
+
+
+
+

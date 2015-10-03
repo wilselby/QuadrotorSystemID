@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/carmen3D/!svn/ver/541/carmen3D/src/controller/sysidAnalysis
+END
+animateTrajectory.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/animateTrajectory.m
+END
+meanFilter.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/meanFilter.m
+END
+printGainsForC.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/printGainsForC.m
+END
+makeKalmanMatrices.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/makeKalmanMatrices.m
+END
+rotMat2D.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/rotMat2D.m
+END
+printMat.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/printMat.m
+END
+IMUAnalysis.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/carmen3D/!svn/ver/541/carmen3D/src/controller/sysidAnalysis/IMUAnalysis.m
+END
+computeLQRGains2.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/computeLQRGains2.m
+END
+sysidAnalysis.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/carmen3D/!svn/ver/197/carmen3D/src/controller/sysidAnalysis/sysidAnalysis.m
+END
+quadSim.m
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/quadSim.m
+END
+medianFilter.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/medianFilter.m
+END
+eulerToMatrix.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/eulerToMatrix.m
+END
+computeLQRGains.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/computeLQRGains.m
+END
+convertBodyToGlobal.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/convertBodyToGlobal.m
+END
+convertGlobalToBody.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/carmen3D/!svn/ver/41/carmen3D/src/controller/sysidAnalysis/convertGlobalToBody.m
+END
